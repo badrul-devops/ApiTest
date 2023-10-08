@@ -8,7 +8,7 @@ Feature: POST API REQUEST
 #simple POST Request
   Scenario: POST API Test
     Given url 'https://reqres.in/api/users'
-    And request {"name": "Yelias Ahmed", "job": "SQA Engineer" }
+    And request {"name": "Badrul Alam", "job": "devops Engineer" }
     When method POST
     Then status 201
     And print response
@@ -17,7 +17,7 @@ Feature: POST API REQUEST
 #POST Request with Background
   Scenario: POST API Test with Background
     Given path '/users'
-    And request {"name": "Yelias Ahmed", "job": "SQA Engineer" }
+    And request {"name": "Badrul Alam", "job": "Devops Engineer" }
     When method POST
     Then status 201
     And print response
@@ -26,16 +26,16 @@ Feature: POST API REQUEST
 #POST Request with Assertions
   Scenario: POST API Test with Assertions
     Given path '/users'
-    And request {"name": "Yelias Ahmed", "job": "SQA Engineer" }
+    And request {"name": "Badrul Alam", "job": "Devops Engineer" }
     When method POST
     Then status 201
-    And match response == {"name": "Yelias Ahmed","job": "SQA Engineer","id": "#string","createdAt": "#ignore" }
+    And match response == {"name": "Badrul Alam","job": "Devops Engineer","id": "#string","createdAt": "#ignore" }
     And print response
 
 #POST Request with PostResponse payload
   Scenario: POST API Test with PostResponse payload
     Given path '/users'
-    And request {"name": "Yelias Ahmed", "job": "SQA Engineer" }
+    And request {"name": "Badrul Alam", "job": "Devops Engineer" }
     When method POST
     Then status 201
     And match response == payload
