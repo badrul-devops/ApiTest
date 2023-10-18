@@ -1,1 +1,1 @@
-# KarateDemo
+# Karate
